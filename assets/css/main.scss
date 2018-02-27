@@ -1,0 +1,88 @@
+// Frameworks
+
+// Definings
+@import "_reset.scss";
+@import "_variables.scss";
+
+// Global Styles
+@import "_globals.scss";
+
+// Page Specifics
+
+// Mixins
+@import "_mixins.scss";
+
+
+$blue: #3F8782;
+
+//--------------
+//	Global
+//--------------
+body, html {
+	background: rgb(35, 35, 35);
+}
+
+.menu-top {
+	width: 100%;
+	.shape-wrapper {
+		position: fixed;
+		margin-top: 15%;
+		margin-left: 10%;
+		.shape {
+			padding-top: 40px;
+			text-align: center;
+			font-weight: 100;
+			letter-spacing: 2px;
+			font-size: 0.9em;
+		}
+		.menu-0 {
+			width: 100px;
+			height: 100px;
+			//background: $blue;
+			border: 1px solid rgb(250, 250, 250);
+			transform: rotate(45deg);
+			animation-name: rotateMeBitch;
+			animation-duration: 10s;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+		}
+		span {
+			top: -57px;
+			left: 3px;
+			position: relative;
+			color: rgb(250, 250, 250);
+			text-align: center;
+			font-weight: 100;
+			letter-spacing: 2px;
+			font-size: 1em;
+		}
+	}	
+}
+
+.title-wrapper {
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	position: fixed;
+	width: 100%;
+	text-align: center;
+	img {
+		width: 100px;
+	}
+	h1 {
+		font-size: 2em;
+		color: rgb(250, 250, 250);
+		font-weight: 100;
+		letter-spacing: 2px;
+	}
+}
+
+
+@keyframes rotateMeBitch {
+	0% {
+		transform: rotate(45deg);
+	}
+	100% {
+		transform: rotate(410deg);
+	}
+}

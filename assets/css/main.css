@@ -1,0 +1,105 @@
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0; }
+
+/* remember to highlight inserts somehow! */
+ins {
+  text-decoration: none; }
+
+del {
+  text-decoration: line-through; }
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body, html {
+  background: #232323; }
+
+.menu-top {
+  width: 100%; }
+  .menu-top .shape-wrapper {
+    position: fixed;
+    margin-top: 15%;
+    margin-left: 10%; }
+    .menu-top .shape-wrapper .shape {
+      padding-top: 40px;
+      text-align: center;
+      font-weight: 100;
+      letter-spacing: 2px;
+      font-size: 0.9em; }
+    .menu-top .shape-wrapper .menu-0 {
+      width: 100px;
+      height: 100px;
+      border: 1px solid #fafafa;
+      transform: rotate(45deg);
+      animation-name: rotateMeBitch;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear; }
+    .menu-top .shape-wrapper span {
+      top: -57px;
+      left: 3px;
+      position: relative;
+      color: #fafafa;
+      text-align: center;
+      font-weight: 100;
+      letter-spacing: 2px;
+      font-size: 1em; }
+
+.title-wrapper {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  width: 100%;
+  text-align: center; }
+  .title-wrapper img {
+    width: 100px; }
+  .title-wrapper h1 {
+    font-size: 2em;
+    color: #fafafa;
+    font-weight: 100;
+    letter-spacing: 2px; }
+
+@keyframes rotateMeBitch {
+  0% {
+    transform: rotate(45deg); }
+  100% {
+    transform: rotate(410deg); } }
+
+/*# sourceMappingURL=main.css.map */
