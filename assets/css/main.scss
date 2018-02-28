@@ -1,19 +1,23 @@
-// Frameworks
-
-// Definings
+//--------------
+//	Imports
+//--------------
 @import "_reset.scss";
 @import "_variables.scss";
-
-// Global Styles
 @import "_globals.scss";
-
-// Page Specifics
-
-// Mixins
 @import "_mixins.scss";
 
 
+//--------------
+//	Variables
+//--------------
 $blue: #3F8782;
+$main-font-color-white: rgb(250, 250, 250);
+$main-padding: 25px;
+$nav-font-size-mobile: 0.7em;
+$nav-font-color: rgb(250, 250, 250);
+
+// Main Palette
+$primary-color: rgb(255, 83, 73);
 
 //--------------
 //	Global
@@ -22,67 +26,156 @@ body, html {
 	background: rgb(35, 35, 35);
 }
 
-.menu-top {
-	width: 100%;
-	.shape-wrapper {
+//--------------
+//	Header
+//--------------
+.header {
+	.title-wrapper {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 		position: fixed;
-		margin-top: 15%;
-		margin-left: 10%;
-		.shape {
-			padding-top: 40px;
-			text-align: center;
-			font-weight: 100;
-			letter-spacing: 2px;
-			font-size: 0.9em;
+		width: 100%;
+		text-align: center;
+		margin-top: -30px;
+		z-index: 10;
+		transition: top 0.50s ease-in-out;
+		img {
+			width: 60px;
 		}
-		.menu-0 {
-			width: 100px;
-			height: 100px;
-			//background: $blue;
-			border: 1px solid rgb(250, 250, 250);
-			transform: rotate(45deg);
-			animation-name: rotateMeBitch;
-			animation-duration: 10s;
-			animation-iteration-count: infinite;
-			animation-timing-function: linear;
-		}
-		span {
-			top: -57px;
-			left: 3px;
-			position: relative;
+		h1 {
+			font-size: 2em;
 			color: rgb(250, 250, 250);
-			text-align: center;
 			font-weight: 100;
 			letter-spacing: 2px;
-			font-size: 1em;
 		}
-	}	
+	}
+	.title-wrapper.secondary {
+		top: 105px;
+		/*
+		h1 {
+			display: inline-block;
+			font-size: 1.5em;
+			//margin-top: -20px;
+			position: relative;
+			top: -16px;
+		}
+		img {
+			display: inline-block;
+			width: 45px;
+			margin-right: 7px;
+		}*/
+	}
 }
 
-.title-wrapper {
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+//--------------
+//	Navigation
+//--------------
+.nav-wrapper {
 	position: fixed;
+	top: $main-padding;
 	width: 100%;
-	text-align: center;
-	img {
-		width: 100px;
-	}
-	h1 {
-		font-size: 2em;
+	font-weight: 100;
+	letter-spacing: 2px;
+	z-index: 10;
+	transition: top 0.50s ease-in-out;
+	.nav-mobile-button {
+		right: $main-padding;
+		position: fixed;
 		color: rgb(250, 250, 250);
-		font-weight: 100;
-		letter-spacing: 2px;
+		font-size: 1.3em;
+	}
+	.navigation {
+		width: 100%;
+		font-size: $nav-font-size-mobile;
+		//background: red;
+		padding-top: 20px;
+		overflow: hidden;
+		ul {
+			text-align: center;
+			li {
+				display: inline-block;
+				a {
+					color: $nav-font-color;
+				}
+				a.active {
+					color: $primary-color;
+					text-decoration: none;
+					font-weight: 400;
+				}
+			}
+		}
 	}
 }
 
+.nav-wrapper.secondary {
+	top: 125px;
+}
 
-@keyframes rotateMeBitch {
-	0% {
-		transform: rotate(45deg);
+
+//--------------
+//	    App
+//--------------
+#app {
+	color: white;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	//background: blue;
+	//overflow: hidden;
+	z-index: 0;
+	transition: transform 0.50s ease-in-out;
+	.app-center {
+
 	}
-	100% {
-		transform: rotate(410deg);
+	.app-top {
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		top: -100vh;
+		//background: red;
+	}
+	.app-right {
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		left: 100vw;
+		//background: green;
+		top: 0;
+	}
+	.app-bottom {
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		//background: white;
+		top: 100vh;
+	}
+	.app-left {
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		//background: pink;
+		left: -100vw;
+		top: 0;
 	}
 }
+
+#app.portfolio {
+	transform: translate(0, 100%);
+}
+
+#app.about {
+	transform: translate(-100%, 0);
+}
+
+#app.reviews {
+	transform: translate(0, -100%);
+}
+
+#app.contact {
+	transform: translate(100%, 0);
+}
+
+
+
+
